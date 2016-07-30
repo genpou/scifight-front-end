@@ -1,0 +1,196 @@
+$background: #fff
+$border: #000
+$battle-close-color: #EEFFFF
+$battle-open-color: #CCFFFF
+$header-color: #FFFFFF
+$box-color: #FFFFFF
+$nav-color: #ffffff
+$nav-active-color: #f0f0f0
+$battle-soon-color: #f2aeae
+$battle-process-color: #fdff00
+$battle-finished-color: #63ff00
+
+body
+	background-color : $background
+	transition: all 0.3s ease
+
+.main-container
+	display: flex
+	flex-direction: column
+	justify-content: center
+	.box
+		background-color: $box-color
+		border-radius: 10px		
+		margin-bottom: 5px
+		padding: 10px
+	.header
+		height: 200px
+		background-color: $header-color
+		display: flex
+		.logo
+			margin: auto
+			padding: 0px
+	.battle-list
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		.battle-close
+			margin: 5px
+			background-color: $battle-close-color
+			box-shadow: -2px 2px 2px -2px rgba(0,0,0,0.61)
+			border-radius: 10px
+			border: 1px solid #AAAAAA
+			font-size: 18px
+			width: 100%
+			padding: 10px
+			.battle-content
+				display: none
+			.battle-hat-parrant	
+				width: 100%
+				display: flex
+				flex-direction: row-revers
+				flex-wrap: wrap	
+				justify-content: space-between	
+				align-items: center
+				.battle-hat
+					padding: 10px
+			.battle-name
+				font-size: 24px
+			.battle-status
+				//border: 1px solid black
+				border-radius: 10px
+				width: 100px
+				display: flex
+				justify-content: center
+				span
+					margin: auto
+			.battle-soon
+				background-color: $battle-soon-color
+			.battle-process
+				background-color: $battle-process-color
+			.battle-finished
+				background-color: $battle-finished-color
+
+		.battle-open
+			@extend .battle-close
+			background-color: $battle-open-color
+			box-shadow: -3px 3px 3px -2px rgba(0,0,0,0.61)
+			.battle-content
+				display: block
+
+
+.comand-list
+	display: flex
+	flex-wrap: wrap
+	flex-direction: row
+	justify-content: space-between	
+	.comand-item
+		margin: 10px
+.nav-menu
+	display: none
+	order: 3
+	display: flex
+	justify-content: flex-end
+	flex-direction: column
+	flex-flow: column //nowrap
+	align-items: center
+	//margin: auto
+	align-items: flex-start
+	flex-shrink: 2
+	li
+		display: block		
+		a
+			text-decoration: none
+			font-size: 22px
+			display: block
+			padding: 14px
+		&:hover
+			background-color: $nav-active-color
+.navi
+	background-color: $nav-color
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-content: flex-start
+	border-bottom: 1px solid #AAAAAA
+	flex-wrap: wrap
+	.logo
+		order: 1
+		width: 100px
+		margin-top: 10px
+		padding: 10px
+		font-size: 24px
+	.nav-menu
+		display: none
+.toggle
+	order: 2
+	width: 40px
+	background-color: #FFFFFF
+	border: 2px solid #ffffff
+	margin-top: 10px
+	height: 40px
+	//border-radius: 10px
+	display: flex
+	justify-content: center
+	flex-direction: column
+	.hamb
+		background-color: #999999
+		height: 5px
+		width: 25px
+		margin: auto
+		border-radius: 2px
+.action-box
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-around
+	align-center: flex-end
+	.action-caption
+		//align-self: flex-start
+.probleme
+	margin: 15px
+.role-item
+	margin: 10px
+.results-table
+	border: 12px solid white
+	border-radius: 10px
+	td
+		padding: 10px
+		border: 1px solid black
+		border-collapse: collapse
+
+
+@media screen and (min-width: 400px)
+	.navi
+		.logo
+			display: block
+			margin-top: 10px
+			padding: 10px
+			font-size: 24px
+
+@media screen and (min-width: 491px)
+	.nav-menu
+		order: 2
+	.toggle
+		order: 3
+@media screen and (min-width: 768px)
+	.navi
+		.toggle
+			display: none
+			margin: auto
+		.nav-menu
+			display: flex
+			flex-direction: row
+		.logo
+			margin: auto
+
+
+  //@media (min-width: 992px)
+  //@media (min-width: 1200px) 
+
+
+		
+
+
+		
+
+
