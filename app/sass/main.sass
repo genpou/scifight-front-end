@@ -20,7 +20,7 @@ body
 	justify-content: center
 	.box
 		background-color: $box-color
-		border-radius: 10px		
+		border-radius: 10px
 		margin-bottom: 5px
 		padding: 10px
 	.header
@@ -45,12 +45,12 @@ body
 			padding: 10px
 			.battle-content
 				display: none
-			.battle-hat-parrant	
+			.battle-hat-parrant
 				width: 100%
 				display: flex
 				flex-direction: row-revers
-				flex-wrap: wrap	
-				justify-content: space-between	
+				flex-wrap: wrap
+				justify-content: space-between
 				align-items: center
 				.battle-hat
 					padding: 10px
@@ -83,7 +83,9 @@ body
 	display: flex
 	flex-wrap: wrap
 	flex-direction: row
-	justify-content: space-between	
+	justify-content:center
+	align-items: center
+	align-content: center
 	.comand-item
 		margin: 10px
 .nav-menu
@@ -98,7 +100,7 @@ body
 	align-items: flex-start
 	flex-shrink: 2
 	li
-		display: block		
+		display: block
 		a
 			text-decoration: none
 			font-size: 22px
@@ -141,13 +143,23 @@ body
 		border-radius: 2px
 .action-box
 	display: flex
-	flex-wrap: wrap
-	justify-content: space-around
-	align-center: flex-end
+	flex-direction: column
+	align-content: center
 	.action-caption
-		//align-self: flex-start
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		.probleme
+			align-self: baseline
+		.action-title
+			height: 25%
+
+	.action-result
+		display: flex
+		flex-direction: column
+		justify-content: space-between
 .probleme
-	margin: 15px
+	margin: 10px
 .role-item
 	margin: 10px
 .results-table
@@ -182,15 +194,24 @@ body
 			flex-direction: row
 		.logo
 			margin: auto
+@media screen and (min-width: 768px)
+	.action-box
+		flex-direction: row
+		//justify-content: flex-start
 
+@media screen and (min-width: 992px)
+	.action-box
+		flex-wrap: nowrap
+		justify-content: space-between
+		align-items: flex-start
+		>*
+			padding: 8px
+		.probleme
+			flex: 0 2 auto
+		.role
+			flex: 1 1 400px
 
-  //@media (min-width: 992px)
-  //@media (min-width: 1200px) 
-
-
-		
-
-
-		
-
-
+@media screen and (min-width: 1024px)
+	.action-box
+		.action-caption, .action-result
+			flex-direction: row
