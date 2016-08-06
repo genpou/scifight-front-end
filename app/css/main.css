@@ -306,9 +306,9 @@ body {
   max-width: 300px; }
   .comand-list .comand-item {
     -webkit-box-flex: 1;
-    -webkit-flex: 1 0 auto;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto; }
+    -webkit-flex: 1 0 200px;
+        -ms-flex: 1 0 200px;
+            flex: 1 0 200px; }
 
 @media screen and (min-width: 420px) {
   .navi .logo {
