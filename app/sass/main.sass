@@ -9,6 +9,7 @@ $nav-active-color: #f0f0f0
 $battle-soon-color: #f2aeae
 $battle-process-color: #fdff00
 $battle-finished-color: #63ff00
+$champ-box-color: #aaffee
 
 body
 	background-color : $background
@@ -169,6 +170,20 @@ body
 	.comand-item
 		//width: 200px
 		flex: 1 0 200px
+.champs
+	display: flex
+	flex-direction: column
+	align-content: center
+.champ-box
+	display: flex
+	flex-direction: row-reverse
+	justify-content: space-between
+	background-color: $champ-box-color
+	padding: 15px
+	margin: 10px
+	.champ-year
+		font-size: 2rem
+
 
 @media screen and (min-width: 420px)
 	.navi
@@ -186,6 +201,18 @@ body
 		order: 2
 	.toggle
 		order: 3
+	.champs
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: space-around
+		align-items: flex-start
+		.champ-box
+			flex-direction: column
+			width: 200px
+			height: 200px
+			padding: 10px
+			align-items: center
+			justify-content: space-around
 @media screen and (min-width: 768px)
 	.navi
 		.toggle
@@ -222,3 +249,4 @@ body
 		.action-result
 			flex-direction: row
 			justify-content: space-around
+			align-items: baseline
