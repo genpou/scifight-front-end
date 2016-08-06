@@ -79,15 +79,7 @@ body
 				display: block
 
 
-.comand-list
-	display: flex
-	flex-wrap: wrap
-	flex-direction: row
-	justify-content:center
-	align-items: center
-	align-content: center
-	.comand-item
-		margin: 10px
+
 .nav-menu
 	display: none
 	order: 3
@@ -149,11 +141,6 @@ body
 		display: flex
 		flex-direction: column
 		justify-content: flex-start
-		.probleme
-			align-self: baseline
-		.action-title
-			height: 25%
-
 	.action-result
 		display: flex
 		flex-direction: column
@@ -169,15 +156,29 @@ body
 		padding: 10px
 		border: 1px solid black
 		border-collapse: collapse
+.comand-list
+	align-self: center
+	display: flex
+	flex-wrap: wrap
+	flex-direction: column
+	align-items: space-around
+	align-content: center
+	justify-content: space-around
+	max-width: 300px
+	.comand-item
+		//width: 200px
+		flex: 1 0 auto
 
-
-@media screen and (min-width: 400px)
+@media screen and (min-width: 420px)
 	.navi
 		.logo
 			display: block
 			margin-top: 10px
 			padding: 10px
 			font-size: 24px
+	.comand-list
+		flex-direction: row
+		max-width: 500px
 
 @media screen and (min-width: 491px)
 	.nav-menu
@@ -194,9 +195,13 @@ body
 			flex-direction: row
 		.logo
 			margin: auto
-@media screen and (min-width: 768px)
+
 	.action-box
 		flex-direction: row
+		.action-caption
+			flex: 1 1 300px
+		.action-result
+			flex: 2 1 auto
 		//justify-content: flex-start
 
 @media screen and (min-width: 992px)
@@ -206,12 +211,11 @@ body
 		align-items: flex-start
 		>*
 			padding: 8px
-		.probleme
-			flex: 0 2 auto
-		.role
-			flex: 1 1 400px
+	.comand-list
+		justify-content: space-around
+		max-width: none
 
-@media screen and (min-width: 1024px)
-	.action-box
-		.action-caption, .action-result
-			flex-direction: row
+//@media screen and (min-width: 1024px)
+	//.action-box
+	//	.action-caption, .action-result
+	//		flex-direction: row

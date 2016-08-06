@@ -112,29 +112,6 @@ body {
       .main-container .battle-list .battle-open .battle-content {
         display: block; }
 
-.comand-list {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-align-content: center;
-      -ms-flex-line-pack: center;
-          align-content: center; }
-  .comand-list .comand-item {
-    margin: 10px; }
-
 .nav-menu {
   display: none;
   -webkit-box-ordinal-group: 4;
@@ -270,12 +247,6 @@ body {
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
             justify-content: flex-start; }
-    .action-box .action-caption .probleme {
-      -webkit-align-self: baseline;
-          -ms-flex-item-align: baseline;
-              align-self: baseline; }
-    .action-box .action-caption .action-title {
-      height: 25%; }
   .action-box .action-result {
     display: -webkit-box;
     display: -webkit-flex;
@@ -306,12 +277,52 @@ body {
     border: 1px solid black;
     border-collapse: collapse; }
 
-@media screen and (min-width: 400px) {
+.comand-list {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: space-around;
+  -webkit-align-items: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  max-width: 300px; }
+  .comand-list .comand-item {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto; }
+
+@media screen and (min-width: 420px) {
   .navi .logo {
     display: block;
     margin-top: 10px;
     padding: 10px;
-    font-size: 24px; } }
+    font-size: 24px; }
+  .comand-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 500px; } }
 
 @media screen and (min-width: 491px) {
   .nav-menu {
@@ -340,15 +351,23 @@ body {
         -ms-flex-direction: row;
             flex-direction: row; }
   .navi .logo {
-    margin: auto; } }
-
-@media screen and (min-width: 768px) {
+    margin: auto; }
   .action-box {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
-            flex-direction: row; } }
+            flex-direction: row; }
+    .action-box .action-caption {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1 1 300px;
+          -ms-flex: 1 1 300px;
+              flex: 1 1 300px; }
+    .action-box .action-result {
+      -webkit-box-flex: 2;
+      -webkit-flex: 2 1 auto;
+          -ms-flex: 2 1 auto;
+              flex: 2 1 auto; } }
 
 @media screen and (min-width: 992px) {
   .action-box {
@@ -366,21 +385,8 @@ body {
             align-items: flex-start; }
     .action-box > * {
       padding: 8px; }
-    .action-box .probleme {
-      -webkit-box-flex: 0;
-      -webkit-flex: 0 2 auto;
-          -ms-flex: 0 2 auto;
-              flex: 0 2 auto; }
-    .action-box .role {
-      -webkit-box-flex: 1;
-      -webkit-flex: 1 1 400px;
-          -ms-flex: 1 1 400px;
-              flex: 1 1 400px; } }
-
-@media screen and (min-width: 1024px) {
-  .action-box .action-caption, .action-box .action-result {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row; } }
+  .comand-list {
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    max-width: none; } }
