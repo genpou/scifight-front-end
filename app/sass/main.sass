@@ -137,6 +137,7 @@ body
 	display: flex
 	flex-direction: column
 	align-content: center
+	align-items: center
 	.action-caption
 		display: flex
 		flex-direction: column
@@ -160,7 +161,7 @@ body
 	align-self: center
 	display: flex
 	flex-wrap: wrap
-	flex-direction: column
+	flex-direction: row
 	align-items: space-around
 	align-content: center
 	justify-content: space-around
@@ -215,7 +216,9 @@ body
 		justify-content: space-around
 		max-width: none
 
-//@media screen and (min-width: 1024px)
-	//.action-box
-	//	.action-caption, .action-result
-	//		flex-direction: row
+@media screen and (min-width: 1024px)
+	.action-box
+		justify-content: space-around
+		.action-result
+			flex-direction: row
+			justify-content: space-around
