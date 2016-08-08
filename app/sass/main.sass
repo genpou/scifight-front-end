@@ -137,8 +137,8 @@ body
 .action-box
 	display: flex
 	flex-direction: column
-	align-content: center
-	align-items: center
+	align-content: flex-start
+	align-items: flex-start
 	.action-caption
 		display: flex
 		flex-direction: column
@@ -227,10 +227,12 @@ body
 	.action-box
 		flex-direction: row
 		.action-caption
-			flex: 1 1 300px
+			flex-grow: 1
+			flex-shrink: 1
+			flex-basis: 300px
 		.action-result
 			flex: 2 1 auto
-		//justify-content: flex-start
+			//justify-content: flex-start
 
 @media screen and (min-width: 992px)
 	.action-box
@@ -249,4 +251,4 @@ body
 		.action-result
 			flex-direction: row
 			justify-content: space-around
-			align-items: baseline
+			//align-items: baseline
