@@ -311,9 +311,9 @@ table {
     border-collapse: collapse; }
 
 .comand-list {
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-          align-self: center;
+  -webkit-align-self: stretch;
+      -ms-flex-item-align: stretch;
+          align-self: stretch;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -341,7 +341,8 @@ table {
     -webkit-box-flex: 1;
     -webkit-flex: 1 0 200px;
         -ms-flex: 1 0 200px;
-            flex: 1 0 200px; }
+            flex: 1 0 200px;
+    padding: 10px; }
 
 .champs {
   display: -webkit-box;
@@ -389,9 +390,11 @@ table {
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row;
-    max-width: 500px; } }
+    max-width: 400px; } }
 
 @media screen and (min-width: 491px) {
+  .comand-list {
+    max-width: 600px; }
   .nav-menu {
     -webkit-box-ordinal-group: 3;
     -webkit-order: 2;

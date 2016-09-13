@@ -170,7 +170,7 @@ table
 		border: 1px solid black
 		border-collapse: collapse
 .comand-list
-	align-self: center
+	align-self: stretch
 	display: flex
 	flex-wrap: wrap
 	flex-direction: row
@@ -181,6 +181,7 @@ table
 	.comand-item
 		//width: 200px
 		flex: 1 0 200px
+		padding: 10px
 .champs
 	display: flex
 	flex-direction: column
@@ -205,9 +206,11 @@ table
 			font-size: 24px
 	.comand-list
 		flex-direction: row
-		max-width: 500px
+		max-width: 400px
 
 @media screen and (min-width: 491px)
+	.comand-list
+		max-width: 600px
 	.nav-menu
 		order: 2
 	.toggle
