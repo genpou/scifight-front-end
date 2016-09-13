@@ -1,5 +1,5 @@
 body {
-  background-color: #fff;
+  background-color: #E8F2F8;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   font-family: 'Roboto', sans-serif; }
@@ -8,6 +8,7 @@ table {
   border-collapse: collapse; }
 
 .content-container {
+  background-color: #E8F2F8;
   max-width: 1400px;
   -webkit-align-self: center;
       -ms-flex-item-align: center;
@@ -41,9 +42,10 @@ table {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  background-color: #E8F2F8; }
   .main-container .box {
-    background-color: #FFFFFF;
+    background-color: #E8F2F8;
     -webkit-border-radius: 10px;
             border-radius: 10px;
     margin-bottom: 5px;
@@ -53,16 +55,8 @@ table {
         -ms-flex-align: stretch;
                 -ms-grid-row-align: stretch;
             align-items: stretch; }
-  .main-container .header {
-    height: 200px;
-    background-color: #FFFFFF;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex; }
-    .main-container .header .logo {
-      margin: auto;
-      padding: 0px; }
+  .main-container header {
+    background-color: #EAEBF9; }
   .main-container .battle-list {
     display: -webkit-box;
     display: -webkit-flex;
@@ -185,7 +179,7 @@ table {
       background-color: #f0f0f0; }
 
 .navi {
-  background-color: #ffffff;
+  background-color: #F6F3FF;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -224,8 +218,8 @@ table {
       -ms-flex-order: 2;
           order: 2;
   width: 40px;
-  background-color: #FFFFFF;
-  border: 2px solid #ffffff;
+  background-color: #F6F3FF;
+  border: 2px solid #F6F3FF;
   margin-top: 10px;
   height: 40px;
   display: -webkit-box;
@@ -250,6 +244,7 @@ table {
             border-radius: 2px; }
 
 .action-box {
+  padding: 10px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -295,6 +290,12 @@ table {
         -ms-flex-pack: justify;
             justify-content: space-between; }
 
+.even {
+  background-color: #E5E6F9; }
+
+.odd {
+  background-color: #E2F0F8; }
+
 .probleme {
   margin: 10px; }
 
@@ -302,12 +303,14 @@ table {
   margin: 10px; }
 
 .results-table {
-  border: 12px solid white;
+  border: 0px solid white;
   -webkit-border-radius: 10px;
-          border-radius: 10px; }
+          border-radius: 10px;
+  width: 200px; }
   .results-table td {
-    padding: 10px;
-    border: 1px solid black;
+    text-align: center;
+    padding: 4px;
+    border: 1px solid #BBB0E4;
     border-collapse: collapse; }
 
 .comand-list {
@@ -336,7 +339,8 @@ table {
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
-  max-width: 300px; }
+  max-width: 300px;
+  background-color: #E8F2F8; }
   .comand-list .comand-item {
     -webkit-box-flex: 1;
     -webkit-flex: 1 0 200px;
