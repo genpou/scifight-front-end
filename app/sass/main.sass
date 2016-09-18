@@ -6,19 +6,22 @@ $header-color: #EAEBF9
 $box-color: #E8F2F8
 $nav-color: #F6F3FF
 $nav-active-color: #f0f0f0
-$battle-soon-color: #f2aeae
+$battle-soon-color: #7468B3
 $battle-process-color: #fdff00
-$battle-finished-color: #63ff00
+$battle-finished-color: #957B13
 $champ-box-color: #aaffee
 $evenColor: #E5E6F9
 $oddColor: #E2F0F8
 $comandListColor: #E8F2F8
 $toggleColor: #F6F3FF
 $teamlist-color: #E8FfF8
-
+$list-color:  #E8FfF8
+$list-hover-color: #DBD4FF
+$champ-box-hover-color: #DBD4FF
+*
+	transition: all 0.2s linear
 body
 	background-color : $background
-	transition: all 0.3s ease
 	font-family: 'Roboto', sans-serif
 table
 	border-collapse: collapse
@@ -56,12 +59,14 @@ table
 		display: flex
 		flex-direction: row
 		flex-wrap: wrap
+		a
+			text-decoration: none
 		.battle-close
-			margin: 5px
-			background-color: $battle-close-color
-			box-shadow: -2px 2px 2px -2px rgba(0,0,0,0.61)
-			border-radius: 10px
-			border: 1px solid #AAAAAA
+			//margin: 5px			
+			//background-color: $battle-close-color
+			//box-shadow: -2px 2px 2px -2px rgba(0,0,0,0.61)
+			//border-radius: 10px
+			//border: 1px solid #AAAAAA
 			font-size: 18px
 			width: 100%
 			padding: 10px
@@ -87,10 +92,14 @@ table
 					margin: auto
 			.battle-soon
 				background-color: $battle-soon-color
+				color: white
 			.battle-process
-				background-color: $battle-process-color
+				//background-color: $battle-process-color
+				color: #2D1895
+				border: 2px solid #2D1895
 			.battle-finished
 				background-color: $battle-finished-color
+				color: white
 
 		.battle-open
 			@extend .battle-close
@@ -98,17 +107,35 @@ table
 			box-shadow: -3px 3px 3px -2px rgba(0,0,0,0.61)
 			.battle-content
 				display: block
-.team-list	
-	background-color: $teamlist-color
-	display: flex
-	flex-direction: column
+.team-list
 	.team-list-item
-		padding: 10px	
-		width: 100%	
+		padding: 20px	
+		width: 100%		
 		span, img
 			padding: 0px 10px 0px 10px
+		.team-name
+			font-size: 24pх
+		
 
+.probleme-list
+	margin-left: 0
+	padding-left: 0
+	.probleme-item
+		list-style-type: none
+		padding-left: 20px
 
+.list
+	background-color: $list-color
+	display: flex
+	flex-direction: column
+	.list-item
+		padding: 10px	
+		width: 100%
+		a
+			text-decoration: none
+			color: black			
+	.list-item:hover		
+		background-color: $list-hover-color
 .nav-menu
 	display: none
 	order: 3
@@ -218,8 +245,11 @@ table
 	background-color: $champ-box-color
 	padding: 15px
 	margin: 10px
+	&:hover
+		background-color: $champ-box-hover-color
 	.champ-year
 		font-size: 2rem
+	
 .box		
 	.team-box
 		align-self: flex-start
