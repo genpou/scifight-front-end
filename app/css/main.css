@@ -384,6 +384,11 @@ table {
         -ms-flex: 1 0 200px;
             flex: 1 0 200px;
     padding: 10px; }
+  .comand-list a {
+    text-decoration: none;
+    color: black; }
+    .comand-list a:hover {
+      text-decoration: underline; }
 
 .champs {
   display: -webkit-box;
@@ -398,6 +403,9 @@ table {
   -webkit-align-content: center;
       -ms-flex-line-pack: center;
           align-content: center; }
+  .champs a {
+    text-decoration: none;
+    color: black; }
 
 .champ-box {
   display: -webkit-box;
